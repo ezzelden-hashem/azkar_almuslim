@@ -39,6 +39,8 @@ npm install ^
 @reduxjs/toolkit ^
 react-redux ^
 react-router ^
+react-i18next ^
+i18next ^
 jeep-sqlite@latest --save
 
 

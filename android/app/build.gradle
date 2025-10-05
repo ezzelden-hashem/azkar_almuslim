@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.ezzeldenh.athkar_almuslim"
+    namespace "com.ezzeldenh.azkar_almuslim"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.ezzeldenh.athkar_almuslim"
+        applicationId "com.ezzeldenh.azkar_almuslim"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -20,6 +20,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "azkar_almuslim"
+            def versionName = variant.versionName
+            def buildDate = new Date().format("yyyyMMddHHmmss")
+
+            outputFileName = "${appName}-${versionName}-${buildDate}.apk"
         }
     }
 }

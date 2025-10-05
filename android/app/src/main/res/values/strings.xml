@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Athkar Al-Muslim</string>
-    <string name="title_activity_main">Athkar Al-Muslim</string>
-    <string name="package_name">com.ezzeldenh.athkar_almuslim</string>
-    <string name="custom_url_scheme">com.ezzeldenh.athkar_almuslim</string>
+    <string name="app_name">Azkar Al-Muslim</string>
+    <string name="title_activity_main">Azkar Al-Muslim</string>
+    <string name="package_name">com.ezzeldenh.azkar_almuslim</string>
+    <string name="custom_url_scheme">com.ezzeldenh.azkar_almuslim</string>
 </resources>
