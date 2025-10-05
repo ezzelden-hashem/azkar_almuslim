@@ -41,34 +41,33 @@ The app isn’t just for reading — it’s built to **help you connect** with y
 
 ## 📲 Upcoming Features
 
-🚀 Offline mode for full accessibility  
 🌙 Daily reminders and notification customization  
 🧭 Personalized Azkar suggestions  
 📊 Reading statistics and progress tracking  
 
 ---
 
-## 🧑‍💻 Tech Stack (optional, if applicable)
+## 🧑‍💻 Tech Stack
 
-- **Framework:** (e.g., Flutter / Angular + Capacitor / React Native)  
-- **Language:** TypeScript / Dart / JavaScript  
-- **State Management:** (e.g., Redux, Bloc, Context API)  
-- **Storage:** Local storage or SQLite  
+- **Framework:** (React / Capacitor)
+- **Language:** TypeScript / JavaScript  
+- **State Management:** (Redux, Context API)  
+- **Storage:** Local storage
 - **Platform:** Android / iOS
 
 ---
 
-## 🛠️ Installation (example)
+## 🛠️ Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/azkar-al-muslim.git
+git clone https://github.com/ezzelden-hashem/azkar_almuslim.git
 
 # Navigate to the project folder
-cd azkar-al-muslim
+cd azkar_almuslim
 
 # Install dependencies
-npm install   # or flutter pub get, depending on your stack
+npm install
 
 # Run the app
-npm start     # or flutter run
+npm start
