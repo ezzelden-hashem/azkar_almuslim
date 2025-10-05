@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🌙 Azkar Al-Muslim
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and elegant Islamic app that provides **daily supplications (Azkar)** every Muslim needs throughout the day.  
+Designed with simplicity, beauty, and comfort in mind — free from cluttered UI and harsh visuals often found in similar apps.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🕌 About the App
 
-### `npm start`
+**Azkar Al-Muslim** is not just another collection of Islamic supplications.  
+It’s a thoughtfully designed experience that helps users understand, remember, and practice their daily Azkar with ease.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app offers:
+- A **minimal and modern design** for better readability and comfort.
+- **Soothing color themes** and the ability to choose your preferred theme.
+- **Meaningful explanations** for why each Dhikr matters in your daily life.
+- A **smart reading timer** that remembers where you left off and resets automatically every new day.
+- A comprehensive set of Azkar covering **every aspect of a Muslim’s daily routine**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ **Clean, Modern UI** — Focused on eye comfort and simplicity.  
+🎨 **Multiple Themes** — Switch between light, dark, and custom color schemes.  
+🕒 **Smart Daily Timer** — Tracks your reading progress and resets each day.  
+📖 **Meaningful Explanations** — Understand why each Dhikr is important.  
+📚 **Extensive Collection** — Morning, evening, prayer, and general daily Azkar.  
+⚡ **Lightweight and Fast** — Built for performance and smooth user experience.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 Why This App?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Most Azkar apps on the market suffer from **overcomplicated designs**, **cluttered layouts**, and **non-intuitive navigation**.  
+**Azkar Al-Muslim** solves this by combining **usability, aesthetics, and purpose** in one elegant solution.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app isn’t just for reading — it’s built to **help you connect** with your daily remembrance in a calm and consistent way.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📲 Upcoming Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🚀 Offline mode for full accessibility  
+🌙 Daily reminders and notification customization  
+🧭 Personalized Azkar suggestions  
+📊 Reading statistics and progress tracking  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧑‍💻 Tech Stack (optional, if applicable)
 
-## Learn More
+- **Framework:** (e.g., Flutter / Angular + Capacitor / React Native)  
+- **Language:** TypeScript / Dart / JavaScript  
+- **State Management:** (e.g., Redux, Bloc, Context API)  
+- **Storage:** Local storage or SQLite  
+- **Platform:** Android / iOS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Installation (example)
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/your-username/azkar-al-muslim.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Navigate to the project folder
+cd azkar-al-muslim
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install   # or flutter pub get, depending on your stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run the app
+npm start     # or flutter run
