@@ -1,0 +1,29 @@
+.drawer-item {
+  background-color: #d2d8d2 !important;
+  border: 1px solid #4b514b !important;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: 150ms;
+  outline: none !important;
+}
+.drawer-item:focus {
+  border: 1px solid #4b514b !important;
+  outline: none !important;
+}
+.drawer-item .di-icon {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawer-item .di-title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: cna;
+  display: flex;
+  justify-content: end;
+}
