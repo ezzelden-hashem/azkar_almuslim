@@ -1,3 +1,57 @@
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-ExtraLight.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: noto;
+  src: url(../assets/fonts/NotoKufi/NotoKufiArabic-Thin.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: cna;
+  src: url(../assets/fonts/coc.ttf);
+}
+@font-face {
+  font-family: digit7;
+  src: url(../assets/fonts/digital7.ttf);
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,12 +76,35 @@ a:hover {
   color: #535bf2;
 }
 
-body {
+* {
+  /* color: #213547 !important; */
   margin: 0;
+  user-select: none;
+  padding: 0;
+  /* border: 1px solid #ff0000; */
+  box-sizing: border-box;
+  width: 100%;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html {
+  height: 100vh;
+}
+body {
+  background-color: #ecf1ec;
+  /* padding-top: 30px; */
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* border: 1px solid blue; */
 }
 
 h1 {

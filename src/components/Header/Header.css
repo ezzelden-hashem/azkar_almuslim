@@ -1,0 +1,48 @@
+.main-header {
+  background-color: #4d9c82;
+  padding-top: 30px;
+  font-family: noto;
+  font-size: 30px;
+  font-weight: 700;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mh-menu-icon {
+  font-size: 32px !important;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+.floating-header {
+  background-color: #4d9c82;
+  padding: 10px;
+  padding-top: 30px;
+  font-family: noto;
+  font-size: 19px;
+  font-weight: 600;
+  width: 100%;
+  box-shadow: 0 0 15px #00000093;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  z-index: 10;
+  transition: 200ms;
+}
+.floating-header .fh-title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.floating-header .fh-menu-btn {
+  width: fit-content;
+  border: none !important;
+  outline: none !important;
+}

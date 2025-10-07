@@ -1,0 +1,31 @@
+/* cspell:disable */
+.zekr-card {
+  background-color: #356e58 !important;
+  border: 2px solid #24392400 !important;
+  min-height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  outline: none !important;
+  transition: 150ms;
+}
+.zekr-card .zc-icon {
+  color: #ffffff !important;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zekr-card .zc-icon * {
+  color: #ffffff !important;
+}
+.zekr-card .zc-title {
+  color: #ffffff !important;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: noto !important;
+  font-size: 17px !important;
+}

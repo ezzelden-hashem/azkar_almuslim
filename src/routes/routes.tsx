@@ -1,3 +1,5 @@
+// cspell:disable
+import Azkar from "#pages/Azkar/Azkar";
 import Home from "#pages/Home/Home";
 import { createBrowserRouter } from "react-router";
 
@@ -5,11 +7,15 @@ import { createBrowserRouter } from "react-router";
 export const router = createBrowserRouter([
     {
         path: '',
-        element: Home()
+        element: <Home/>
     },
     {
         path: 'home',
-        element: Home()
+        element: <Home/>
+    },
+    {
+        path: 'azkar',
+        element: <Azkar/>
     },
     {
         path: '*',

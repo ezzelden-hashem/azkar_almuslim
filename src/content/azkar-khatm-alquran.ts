@@ -1,5 +1,5 @@
 // cspell:disable
-import { Zekr } from "#types/content.model";
+import { type Zekr } from "#types/content.model";
 
 let pageInfoObj = {
   name: "khatm_alquran",
