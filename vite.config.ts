@@ -4,7 +4,19 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "force-reload-plugin",
+      handleHotUpdate({ server, file }) {
+        if ([".js", ".jsx", ".ts", ".tsx", ".json"].includes(file)) {
+          server.ws.send({
+            type: "full-reload",
+          });
+        }
+      },
+    },
+  ],
   resolve: {
     alias: {
       "#assets": path.resolve(__dirname, "./src/assets"),
@@ -20,4 +32,8 @@ export default defineConfig({
       "#utils": path.resolve(__dirname, "./src/utils"),
     },
   },
+  server: {
+    open: true,
+  },
+  assetsInclude: ["src/styles/"],
 });
