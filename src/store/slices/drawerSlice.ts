@@ -1,13 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+export type DrawerReducerAction<PayloadType> = {
+  type: string;
+  payload: PayloadType;
+}
+
+
 export const drawerSlice = createSlice({
   name: "drawer",
   initialState: false,
   reducers: {
-    setDrawerState: (state, action) => {
-      return action.payload.to as boolean;
+    setDrawerState: (state, action: DrawerReducerAction<boolean>) =>
+    {
+      return action.payload;
     },
-    invertDrawerState: (state, action) => {
+    invertDrawerState: (state, action: DrawerReducerAction<undefined>) =>
+    {
       return !state;
     },
   },

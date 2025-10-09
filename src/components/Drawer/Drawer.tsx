@@ -94,7 +94,7 @@ export default function Drawer({ children }: DrawerProps)
             {
                 if (parseInt(drawerComputedStyle.current!.left) < (drawerWidth / 2))
                 {
-                    dispatch(setDrawerState({to : false}));
+                    dispatch(setDrawerState(false));
                     drawerBoxElement.current!.style.left = `0px`
                     drawerContainerElement.current!.style.backgroundColor = `rgba(0, 0, 0, 0)`
                     drawerContainerElement.current!.style.backdropFilter = `blur(0px)`
@@ -102,7 +102,7 @@ export default function Drawer({ children }: DrawerProps)
                 }
                 else
                 {
-                    dispatch(setDrawerState({to : true}));
+                    dispatch(setDrawerState(true));
                     drawerBoxElement.current!.style.left = `${drawerWidth}px`
                     drawerContainerElement.current!.style.backgroundColor = `rgba(0, 0, 0, 0.8)`
                     drawerContainerElement.current!.style.backdropFilter = `blur(10px)`
@@ -143,7 +143,7 @@ export default function Drawer({ children }: DrawerProps)
         }
     }
     const openDrawer = () => {
-        dispatch(setDrawerState({to : true}));
+        dispatch(setDrawerState(true));
         drawerContainerElement.current!.style.display = 'block';
         setTimeout(() => {
             drawerBoxElement.current!.style.left = drawerComputedStyle.current!.width;
@@ -152,7 +152,7 @@ export default function Drawer({ children }: DrawerProps)
         }, 10)
     }
     const closeDrawer = () => {
-        dispatch(setDrawerState({to : false}));
+        dispatch(setDrawerState(false));
         drawerBoxElement.current!.style.left = `0px`
         drawerContainerElement.current!.style.backgroundColor = `rgba(0, 0, 0, 0)`
         drawerContainerElement.current!.style.backdropFilter = `blur(0px)`

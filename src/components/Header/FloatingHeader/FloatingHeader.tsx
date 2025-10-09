@@ -14,7 +14,7 @@ export default function FloatingHeader()
     const dispatch = useDispatch();
     return (<>
         <div className="floating-header" id="floating-header-id">
-            <Button className="fh-menu-btn" onClick={e => dispatch(invertDrawerState({}))}>
+            <Button className="fh-menu-btn" onClick={e => dispatch(invertDrawerState())}>
                 <MenuIcon />
             </Button>
             <div className="fh-title">أذكار المسلم</div>

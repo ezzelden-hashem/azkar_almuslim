@@ -2,7 +2,7 @@
 
 // external imports
 import { Link, useNavigate } from "react-router";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // mui icons
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -18,18 +18,20 @@ import Header from "#components/Header/Header";
 import { AzkarPages } from "#content/_azkar.pages";
 import { setAzkarPage } from "#store/slices/azkarPageSlice";
 import { MuiIcons } from "#assets/icons/mui.icons";
-import { ReactNode } from "react";
-import { ZekrPage } from "#types/content.model";
+import { ReactNode, useEffect } from "react";
+import { PageCounterStateObject, ZekrPage } from "#types/content.model";
+import { RootState } from "#store/store";
 
 
 export default function Home()
 {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const counterState = useSelector((state: RootState) => state.counterState);
     const icons = MuiIcons
     
     const gotoAzkarPage = (azkarPage: ZekrPage) => {
-        dispatch(setAzkarPage({azkarPage}));
+        dispatch(setAzkarPage(azkarPage));
         setTimeout(() => {
             navigate('/azkar');
         }, 300);

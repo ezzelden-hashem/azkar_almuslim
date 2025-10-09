@@ -10,7 +10,7 @@ export default function MainHeader()
     return (<>
         <div className="main-header">
             <MenuIcon 
-            onClick={e => dispatch(invertDrawerState({}))}
+            onClick={e => dispatch(invertDrawerState())}
             className='mh-menu-icon'/>
             <div className="mh-title">أذكار المسلم</div>
         </div>
