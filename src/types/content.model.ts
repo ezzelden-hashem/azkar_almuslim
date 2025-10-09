@@ -3,6 +3,11 @@ import { SvgIconTypeMap } from "@mui/material/SvgIcon";
 import { ReactNode } from "react";
 
 // cspell:disable
+export type TimerDuration = {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
 export type Zekr = {
   begin?: string;
   content: string;
@@ -16,7 +21,7 @@ export type AzkarPage = {
   favState: boolean;
 };
 export type ZekrPage = {
-  id: number;
+  id: string;
   title: string;
   icon: string;
   azkar: Zekr[];
@@ -25,3 +30,21 @@ export type MuiIcon = {
   name: string;
   icon: ReactNode;
 };
+export type FavObject = {
+  id: string;
+  state: boolean;
+};
+export type PageCounterStateObject = {
+  id: string;
+  counters: number[];
+};
+export type PageTimerStateObject = {
+  id: string;
+  start: number | null;
+  end: number | null;
+  counters: number[];
+};
+export type PageTimerSettingsStateObject = {
+  id: string;
+  duration: TimerDuration;
+}
