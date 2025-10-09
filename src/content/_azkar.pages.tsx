@@ -16,67 +16,67 @@ import { _azkar_khatm_alquran } from "./azkar-khatm-alquran";
 
 export const AzkarPages: ZekrPage[] = [
     {
-        id: 1,
+        id: '1',
         title: 'اذكار الصباح',
         icon: 'LightModeIcon',
         azkar: _azkar_alsbah
     },
     {
-        id: 2,
+        id: '2',
         title: 'اذكار المساء',
         icon: 'NightsStayIcon',
         azkar: _azkar_almsaa
     },
     {
-        id: 3,
+        id: '3',
         title: 'اذكار الاستيقاظ',
         icon: 'AccessibilityNewIcon',
         azkar: _azkar_alestikaz
     },
     {
-        id: 4,
+        id: '4',
         title: 'اذكار النوم',
         icon: 'HotelIcon',
         azkar: _azkar_alnoum
     },
     {
-        id: 5,
+        id: '5',
         title: 'اذكار الوضوء',
         icon: 'WashIcon',
         azkar: _azkar_alwdoua
     },
     {
-        id: 6,
+        id: '6',
         title: 'اذكار المسجد',
         icon: 'MosqueIcon',
         azkar: _azkar_almasged
     },
     {
-        id: 7,
+        id: '7',
         title: 'اذكار الطعام',
         icon: 'FastfoodIcon',
         azkar: _azkar_alta3am
     },
     {
-        id: 8,
+        id: '8',
         title: 'اذكار الخلاء',
         icon: 'BathtubIcon',
         azkar: _azkar_alkhalaa
     },
     {
-        id: 9,
+        id: '9',
         title: 'اذكار المنزل',
         icon: 'MapsHomeWorkIcon',
         azkar: _azkar_almanzel
     },
     {
-        id: 10,
+        id: '10',
         title: 'اذكار ختم القرآن',
         icon: 'AutoStoriesIcon',
         azkar: _azkar_khatm_alquran
     },
     {
-        id: 11,
+        id: '11',
         title: 'اذكار الصلاة',
         icon: 'Man4Icon',
         azkar: _azkar_alsalat
