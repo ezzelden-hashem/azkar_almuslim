@@ -1,6 +1,7 @@
-import { PageTimerSettingsStateObject } from "#types/content.model";
+import { PageTimerSettingsStateObject, TimerDuration } from "#types/content.model";
 import { Preferences } from "@capacitor/preferences";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { deleteTimerCounters } from "./timerSlice";
 
 const timerSettingsState: PageTimerSettingsStateObject[] = []
 const storageKey = 'timerSettingsState'
@@ -53,9 +54,15 @@ export const setTimerSettingsState = createAsyncThunk(
                 {
                     if (t.id === timerSetting.id)
                     {
+                        const hours = ((timerSetting.duration.hours ?? 0) === 0) &&
+                            ((timerSetting.duration.minutes ?? 0) === 0) ? 1 : (timerSetting.duration.hours ?? 0)
                         return {
                             ...t,
-                            duration: timerSetting.duration
+                            duration: {
+                                hours: hours,
+                                minutes: timerSetting.duration.minutes ?? 0,
+                                seconds: timerSetting.duration.seconds ?? 0,
+                            }
                         }
                     }
                     return t;
@@ -78,6 +85,43 @@ export const setTimerSettingsState = createAsyncThunk(
     }
 );
 
+
+
+// -------------------------------------------------------------
+// delete a timer item
+// -------------------------------------------------------------
+
+export const deleteTimerSettingsState = createAsyncThunk(
+    "timer/settings/delete",
+    async (timerId: string, { dispatch }) =>
+    {
+        await dispatch(deleteTimerCounters({ id: timerId }));
+        const storedTimerSettings = await Preferences.get({ key: storageKey });
+        if (storedTimerSettings.value === null)
+        {
+            const state: PageTimerSettingsStateObject[] = [];
+            await Preferences.set({ key: storageKey, value: JSON.stringify(state) });
+            return state;
+        } else
+        {
+            const timerSettingsStateArray = JSON.parse(
+                storedTimerSettings.value
+            ) as PageTimerSettingsStateObject[];
+            const findResult = timerSettingsStateArray.find((t) => t.id === timerId);
+            if (findResult)
+            {
+                const newTimerSettingsArray = timerSettingsStateArray.filter(t => t.id != timerId)
+                await Preferences.set({
+                    key: storageKey,
+                    value: JSON.stringify(newTimerSettingsArray),
+                });
+                return newTimerSettingsArray;
+            }
+            return timerSettingsStateArray;
+        }
+    }
+);
+
 export const timerSettingsSlice = createSlice({
     name: 'timer/settings',
     initialState: timerSettingsState,
@@ -89,6 +133,10 @@ export const timerSettingsSlice = createSlice({
             return action.payload;
         });
         builder.addCase(setTimerSettingsState.fulfilled, (state, action) =>
+        {
+            return action.payload;
+        });
+        builder.addCase(deleteTimerSettingsState.fulfilled, (state, action) =>
         {
             return action.payload;
         });

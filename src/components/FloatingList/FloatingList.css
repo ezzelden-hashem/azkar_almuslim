@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   padding: 25px;
-  transition: 2000ms;
+  transition: 500ms;
 }
 .floating-list.visible {
   opacity: 1;

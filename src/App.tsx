@@ -15,35 +15,38 @@ import { initThemeState } from "#store/slices/themeSlice";
 import { initVibrationState } from "#store/slices/vibrationSlice";
 import { initFingerTrackingState } from "#store/slices/fingerTrackingSlice";
 import { RootState } from "#store/store";
+import { SelectedTimerProvider } from "#context/timerDefaultValueContext";
 
-function App() {
+function App()
+{
   const dispatch = useAppDispatch();
-  const pagesCounters: PageCounterStateObject[] = AzkarPages.flatMap(p => {
-    return {id: p.id, counters: p.azkar.flatMap(c => c.count)} as PageCounterStateObject;
+  const pagesCounters: PageCounterStateObject[] = AzkarPages.flatMap(p =>
+  {
+    return { id: p.id, counters: p.azkar.flatMap(c => c.count) } as PageCounterStateObject;
   });
   const currentTheme = useAppSelector((state: RootState) => state.themeState);
-  useEffect(() => {
+  useEffect(() =>
+  {
     dispatch(initFavState());
     dispatch(initTimerSettingsState());
     dispatch(initTimerState());
     dispatch(initCounterState(pagesCounters));
-    
     dispatch(initCopyTextState());
     dispatch(initFontSizeState());
     dispatch(initThemeState());
     dispatch(initVibrationState());
     dispatch(initFingerTrackingState());
-
-    dispatch(setTimerSettingsState({id: '1', duration: {hours: 0, minutes: 0, seconds: 20}}));
-    dispatch(setTimerSettingsState({id: '2', duration: {hours: 0, minutes: 0, seconds: 20}}));
   }, [])
-  useEffect(() => {
+  useEffect(() =>
+  {
     const bodyElement = document.body;
     bodyElement.className = currentTheme;
   }, [currentTheme])
   return (
     <div className='App' id="app-id">
-      <RouterProvider router={router} />
+      <SelectedTimerProvider>
+        <RouterProvider router={router} />
+      </SelectedTimerProvider>
     </div>
   );
 }

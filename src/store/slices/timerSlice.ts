@@ -6,6 +6,7 @@ import { Preferences } from "@capacitor/preferences";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { AppDispatch, RootState } from "#store/store";
 import { resetCounterState, updateCounterState } from "./counterSlice";
+import { deleteTimerSettingsState } from "./timerSettingsSlice";
 
 const storageKey = "timerState";
 const timerState: PageTimerStateObject[] = [];

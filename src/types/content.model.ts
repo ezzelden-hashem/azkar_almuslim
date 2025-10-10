@@ -53,3 +53,8 @@ export type Theme = {
   title: string;
   icon?: ReactNode;
 }
+export type SelectedTimerInfo = {
+  id: string;
+  duration: TimerDuration;
+  state: boolean;
+}
