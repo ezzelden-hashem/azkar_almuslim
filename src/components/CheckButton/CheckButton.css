@@ -1,0 +1,43 @@
+.check-button {
+  background-color: #d2ead6e6;
+  width: 100%;
+  /* border: 1px solid red; */
+  min-height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 13px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 150ms;
+}
+.check-button * {
+  color: #036800 !important;
+  transition: 150ms;
+}
+.chk-canvas {
+  background-color: #1b61236e;
+  border: 3px solid #03680086;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+.chk-btn-title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+}
+.chk-btn-icon {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}

@@ -1,0 +1,44 @@
+.app-favorites {
+}
+.af-header {
+  background-color: #cbf0e4e6;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  backdrop-filter: blur(10px);
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.af-h-title {
+  color: #094900;
+  font-size: 18px;
+  font-family: noto;
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.af-h-icon {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.af-h-icon * {
+  color: #094900;
+  font-size: 27px !important;
+}
+.af-body {
+  margin-top: 80px;
+}
+.af-b-card {
+}
+.af-b-card-title {
+}
+.af-b-card-icon {
+}

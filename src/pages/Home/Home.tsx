@@ -40,9 +40,9 @@ export default function Home()
         <Header/>
         <Drawer>
             <div className="margin_top" style={{marginTop: "20px", padding: "20px 0", fontSize: "18px", fontWeight: "700"}}>اذكار المسلم</div>
-            <DrawerItem title="المفضلة" icon={<FavoriteBorderIcon style={{fontSize: "22px"}}/>}/>
-            <DrawerItem title="الاعدادات" icon={<SettingsOutlinedIcon style={{fontSize: "22px"}}/>}/>
-            <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon style={{fontSize: "22px"}}/>}/>
+            <DrawerItem title="المفضلة" icon={<FavoriteBorderIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/favs')}/>
+            <DrawerItem title="الاعدادات" icon={<SettingsOutlinedIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/settings')}/>
+            <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/appInfo')}/>
         </Drawer>
         <CardContainer>
             {AzkarPages.map(t => {

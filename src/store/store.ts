@@ -6,6 +6,11 @@ import favState from "./slices/favSlice";
 import counterState from "./slices/counterSlice";
 import timerState from "./slices/timerSlice";
 import timerSettingsState from "./slices/timerSettingsSlice";
+import copyTextState from "./slices/copyTextSlice";
+import fontSizeState from "./slices/fontSizeSlice";
+import themeState from "./slices/themeSlice";
+import vibrationState from "./slices/vibrationSlice";
+import fingerTrackingState from "./slices/fingerTrackingSlice";
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +20,11 @@ export const store = configureStore({
     counterState,
     timerState,
     timerSettingsState,
+    copyTextState,
+    fontSizeState,
+    themeState,
+    vibrationState,
+    fingerTrackingState,
   },
 });
 

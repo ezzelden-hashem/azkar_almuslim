@@ -1,0 +1,59 @@
+.app-settings {
+}
+.as-header {
+  background-color: #cbf0e4e6;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  backdrop-filter: blur(10px);
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.as-h-title {
+  color: #094900;
+  font-size: 18px;
+  font-family: noto;
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.as-h-icon {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.as-h-icon * {
+  color: #094900;
+  font-size: 27px !important;
+}
+.as-body {
+  margin-top: 80px;
+  padding: 10px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.show-themes-btn {
+  font-family: cna !important;
+  font-size: 20px !important;
+  color: #094900 !important;
+  box-shadow: none !important;
+  min-height: 55px;
+  border-radius: 13px !important;
+  background-color: #d2ead6e6 !important;
+  border: none !important;
+  outline: none !important;
+}
+.as-b-card {
+}
+.as-b-card-title {
+}
+.as-b-card-icon {
+}

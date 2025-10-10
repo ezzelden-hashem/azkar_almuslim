@@ -1,7 +1,8 @@
 /* cspell:disable */
 .zekr-card {
   background-color: #356e58 !important;
-  border: 2px solid #24392400 !important;
+  /* border: 2px solid #24392400 !important; */
+  border: none !important;
   min-height: 55px;
   display: flex;
   justify-content: space-between;

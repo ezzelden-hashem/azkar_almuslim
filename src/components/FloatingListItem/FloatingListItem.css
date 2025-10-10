@@ -1,0 +1,37 @@
+.flt-lst-item {
+  background-color: #d2ead6e6;
+  width: 100%;
+  /* border: 1px solid red; */
+  min-height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 13px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 150ms;
+}
+.flt-lst-item * {
+  color: #036800 !important;
+  transition: 150ms;
+}
+.chk-canvas {
+}
+.flt-lst-item-icon {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.flt-lst-item-icon * {
+  max-width: 30px;
+}
+.flt-lst-item-title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+}

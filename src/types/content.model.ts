@@ -48,3 +48,8 @@ export type PageTimerSettingsStateObject = {
   id: string;
   duration: TimerDuration;
 }
+export type Theme = {
+  name: string;
+  title: string;
+  icon?: ReactNode;
+}
