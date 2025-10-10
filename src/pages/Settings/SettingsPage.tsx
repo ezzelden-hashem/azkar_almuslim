@@ -2,7 +2,7 @@ import BigSlider from '#components/BigSlider/BigSlider';
 import CheckButton from '#components/CheckButton/CheckButton';
 import FloatingList from '#components/FloatingList/FloatingList';
 import { useState } from 'react';
-import './AppSettings.css'
+import './SettingsPage.css'
 
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import Button from '@mui/material/Button';
@@ -17,7 +17,7 @@ import { AppThemes } from '#styles/themes/themes';
 import { setThemeState } from '#store/slices/themeSlice';
 
 
-export default function AppSettings()
+export default function SettingsPage()
 {   const navigate = useNavigate()
     const dispatch = useAppDispatch();
     const copyTextState = useAppSelector(state => state.copyTextState)

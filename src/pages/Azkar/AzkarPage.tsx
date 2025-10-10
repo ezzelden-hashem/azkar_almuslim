@@ -1,25 +1,22 @@
 // cspell:disable
-import { useDispatch, useSelector } from 'react-redux'
-import './Azkar.css'
-import { AppDispatch, RootState } from '#store/store'
+import { useSelector } from 'react-redux'
+import './AzkarPage.css'
+import { RootState } from '#store/store'
 
 import ReplayIcon from '@mui/icons-material/Replay';
-import Button from '@mui/material/Button';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { MouseEvent, TouchEvent, useEffect, useRef, useState } from 'react';
+import { MouseEvent, TouchEvent, useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 import { setFavState } from '#store/slices/favSlice';
 import { useAppDispatch, useAppSelector } from '#hooks/hooks';
 import { resetCounterState, updateCounterState } from '#store/slices/counterSlice';
-import { PageCounterStateObject } from '#types/content.model';
-import { createTimerCounters, deleteTimerCounters, setTimerState, updateTimerCounters } from '#store/slices/timerSlice';
+import { createTimerCounters, deleteTimerCounters, updateTimerCounters } from '#store/slices/timerSlice';
 import { CurrentMoment, TimeUnitConverter } from '#utils/time.util';
-import { deepEqual } from '#utils/objects.util';
-// import { invertFavState } from '#store/slices/favSlice';
 
-export default function Azkar()
+
+export default function AzkarPage()
 {
     const dispatch = useAppDispatch();
     const favState = useSelector((state: RootState) => state.favState);

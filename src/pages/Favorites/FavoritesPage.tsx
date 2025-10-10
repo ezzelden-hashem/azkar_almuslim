@@ -4,7 +4,7 @@ import ZekrCard from '#components/ZekrCard/ZekrCard';
 import { AzkarPages } from '#content/_azkar.pages';
 import { ZekrPage } from '#types/content.model';
 import { useDispatch, useSelector } from 'react-redux';
-import './AppFavorites.css';
+import './FavoritesPage.css';
 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useNavigate } from 'react-router';
@@ -12,7 +12,7 @@ import { RootState } from '#store/store';
 import { setAzkarPage } from '#store/slices/azkarPageSlice';
 
 
-export default function Favorites()
+export default function FavoritesPage()
 {
     const dispatch = useDispatch();
     const navigate = useNavigate();

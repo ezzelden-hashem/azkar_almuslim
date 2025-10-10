@@ -1,37 +1,41 @@
 // cspell:disable
-import AppInfo from "#pages/AppInfo/AppInfo";
-import Azkar from "#pages/Azkar/Azkar";
-import Favorites from "#pages/Favorites/AppFavorites";
-import Home from "#pages/Home/Home";
-import AppSettings from "#pages/Settings/AppSettings";
-import { Settings } from "@mui/icons-material";
+import InfoPage from "#pages/AppInfo/InfoPage";
+import AzkarPage from "#pages/Azkar/AzkarPage";
+import FavoritesPage from "#pages/Favorites/FavoritesPage";
+import HomePage from "#pages/Home/HomePage";
+import SettingsPage from "#pages/Settings/SettingsPage";
+import TimerPage from "#pages/Timer/TimerPage";
 import { createBrowserRouter } from "react-router";
 
 
 export const router = createBrowserRouter([
     {
         path: '',
-        element: <Home/>
+        element: <HomePage/>
     },
     {
         path: 'home',
-        element: <Home/>
+        element: <HomePage/>
     },
     {
         path: 'azkar',
-        element: <Azkar/>
+        element: <AzkarPage/>
     },
     {
         path: 'favs',
-        element: <Favorites/>
+        element: <FavoritesPage/>
     },
     {
         path: 'settings',
-        element: <AppSettings/>
+        element: <SettingsPage/>
     },
     {
         path: 'appInfo',
-        element: <AppInfo/>
+        element: <InfoPage/>
+    },
+    {
+        path: 'timer',
+        element: <TimerPage/>
     },
     {
         path: '*',

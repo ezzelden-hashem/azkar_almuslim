@@ -1,7 +1,9 @@
 // cspell:disable
 
+import './HomePage.css'
+
 // external imports
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 
 // mui icons
@@ -18,12 +20,11 @@ import Header from "#components/Header/Header";
 import { AzkarPages } from "#content/_azkar.pages";
 import { setAzkarPage } from "#store/slices/azkarPageSlice";
 import { MuiIcons } from "#assets/icons/mui.icons";
-import { ReactNode, useEffect } from "react";
-import { PageCounterStateObject, ZekrPage } from "#types/content.model";
+import { ZekrPage } from "#types/content.model";
 import { RootState } from "#store/store";
 
 
-export default function Home()
+export default function HomePage()
 {
     const dispatch = useDispatch();
     const navigate = useNavigate();
