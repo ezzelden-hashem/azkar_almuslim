@@ -14,6 +14,7 @@ import { useAppDispatch, useAppSelector } from '#hooks/hooks';
 import { resetCounterState, updateCounterState } from '#store/slices/counterSlice';
 import { createTimerCounters, deleteTimerCounters, updateTimerCounters } from '#store/slices/timerSlice';
 import { CurrentMoment, TimeUnitConverter } from '#utils/time.util';
+import { Haptics } from '@capacitor/haptics'
 
 
 export default function AzkarPage()
@@ -21,6 +22,8 @@ export default function AzkarPage()
     const dispatch = useAppDispatch();
     const favState = useSelector((state: RootState) => state.favState);
     const counterState = useSelector((state: RootState) => state.counterState);
+    const copyTextState = useSelector((state: RootState) => state.copyTextState);
+    const vibrationState = useSelector((state: RootState) => state.vibrationState);
     const azkarPage = useAppSelector((state: RootState) => state.azkarPageState);
     const routerLocation = useLocation();
     const [pageFavState, setPageFavState] = useState<boolean>(false);
@@ -39,23 +42,26 @@ export default function AzkarPage()
     }
     const endSqueeze = (e: TouchEvent | MouseEvent) =>
     {
-        setTimeout(() => {
+        setTimeout(() =>
+        {
             (e.target as HTMLDivElement).classList.remove('active')
         }, 50);
     }
 
 
-    useEffect( () => {
+    useEffect(() =>
+    {
         const timerUiElement = document.getElementById('timer-ui-id');
         if (pageTimerState)
         {
-            const timerWatcher = setInterval(() => {
+            const timerWatcher = setInterval(() =>
+            {
                 if (pageTimerState.end! < Date.now())
                 {
                     async function deleteAndResetTimer()
                     {
-                        await dispatch(deleteTimerCounters({id: azkarPage.id.toString()}));
-                        dispatch(resetCounterState({id: azkarPage.id.toString()}));
+                        await dispatch(deleteTimerCounters({ id: azkarPage.id.toString() }));
+                        dispatch(resetCounterState({ id: azkarPage.id.toString() }));
                     }
                     deleteAndResetTimer()
                     clearInterval(timerWatcher)
@@ -77,9 +83,11 @@ export default function AzkarPage()
     }, [counterState, timerState, timerSettingsState])
 
 
-    useEffect(() => {
+    useEffect(() =>
+    {
         const rootElement = document.getElementById('root') as HTMLDivElement;
-        const onScroll = () => {
+        const onScroll = () =>
+        {
             const progress = (rootElement.scrollTop / (rootElement.scrollHeight - window.innerHeight)) * 100;
             setProgressValue(progress);
         }
@@ -88,11 +96,12 @@ export default function AzkarPage()
     }, [routerLocation])
 
 
-    useEffect(() => {
+    useEffect(() =>
+    {
         const _fav = favState.find(f => f.id === azkarPage.id)
         if (_fav)
         {
-            setPageFavState((_fav.state)? true : false)
+            setPageFavState((_fav.state) ? true : false)
         }
         else setPageFavState(false);
     }, [favState, azkarPage.id])
@@ -103,11 +112,12 @@ export default function AzkarPage()
         const idx = parseInt(counterElement.id.split('-')[counterElement.id.split('-').length - 1]) - 1;
         const count = counterState.find(c => c.id === azkarPage.id)?.counters[idx] ?? 0;
         if (count <= 0) return;
+        if (vibrationState) Haptics.vibrate({ duration: 100 });
         if (pageTimerState)
         {
             dispatch(updateTimerCounters({
                 id: azkarPage.id,
-                payload: {idx: idx, value: count - 1}
+                payload: { idx: idx, value: count - 1 }
             }))
         }
         else if (pageTimerSetting)
@@ -116,10 +126,10 @@ export default function AzkarPage()
             newCounters[idx] = count - 1;
             const startTime = new CurrentMoment().getMoment();
             const endTime = new CurrentMoment()
-            .addHours(pageTimerSetting.duration.hours)
-            .addMinutes(pageTimerSetting.duration.minutes)
-            .addSeconds(pageTimerSetting.duration.seconds)
-            .getMoment();
+                .addHours(pageTimerSetting.duration.hours)
+                .addMinutes(pageTimerSetting.duration.minutes)
+                .addSeconds(pageTimerSetting.duration.seconds)
+                .getMoment();
             dispatch(createTimerCounters({
                 id: azkarPage.id,
                 payload: {
@@ -131,18 +141,20 @@ export default function AzkarPage()
         }
         else
         {
-            dispatch(updateCounterState({id: azkarPage.id, counter: {idx, value: count - 1}}))
+            dispatch(updateCounterState({ id: azkarPage.id, counter: { idx, value: count - 1 } }))
         }
     }
-    const resetCounter = (e: MouseEvent | PointerEvent | TouchEvent) => {
+    const resetCounter = (e: MouseEvent | PointerEvent | TouchEvent) =>
+    {
         const resetElement = (e.currentTarget as HTMLDivElement);
         const resetIdx = parseInt(resetElement.id.split('-')[resetElement.id.split('-').length - 1]) - 1;
-        
+
         resetElement.classList.add('active');
-        setTimeout(() => {
+        setTimeout(() =>
+        {
             resetElement.classList.remove('active');
         }, 100);
-        
+
         if (pageTimerState)
         {
             dispatch(updateTimerCounters({
@@ -155,48 +167,49 @@ export default function AzkarPage()
         else
         {
             dispatch(updateCounterState({
-                id: azkarPage.id, 
-                counter: {idx: resetIdx, value: azkarPage.azkar[resetIdx].count}
+                id: azkarPage.id,
+                counter: { idx: resetIdx, value: azkarPage.azkar[resetIdx].count }
             }));
         }
     }
     return (<>
         <div className="azkar-header">
-            <div className="ah-icon" onClick={e => dispatch(setFavState({id: azkarPage.id, state: !pageFavState}))}>
-                {pageFavState? <FavoriteIcon/> : <FavoriteBorderIcon/>}
+            <div className="ah-icon" onClick={e => dispatch(setFavState({ id: azkarPage.id, state: !pageFavState }))}>
+                {pageFavState ? <FavoriteIcon /> : <FavoriteBorderIcon />}
             </div>
             <div className="ah-title">{azkarPage.title}</div>
             <div className="progress-bar">
-                <div className="progress-value" id='progress-value-id' style={{width: `${progressValue}%`}}></div>
+                <div className="progress-value" id='progress-value-id' style={{ width: `${progressValue}%` }}></div>
             </div>
         </div>
-        
+
         <div className="azkar-cards-wrapper" id='azkar-cards-wrapper-id'>
             <div className="timer-ui" id='timer-ui-id'>{timerUi}</div>
-            {azkarPage.azkar.map(t => {
+            {azkarPage.azkar.map(t =>
+            {
                 index = index + 1;
                 return (
                     <div key={`zekr-card-key-${index}`} className="zekr-card">
                         <div className="zc-header">
                             <div className="zc-number">{index}</div>
-                            <div 
-                            id={`zekr-reset-id-${index}`}
-                            className="zc-reset-icon"
-                            onClick={resetCounter}
-                            ><ReplayIcon/></div>
+                            <div
+                                id={`zekr-reset-id-${index}`}
+                                className="zc-reset-icon"
+                                onClick={resetCounter}
+                            ><ReplayIcon /></div>
                         </div>
                         <div className="zc-body">
-                            <div className="zc-begin">{t.begin}</div>
-                            <div className="zc-content">{t.content}</div>
-                            <div className="zc-end">{t.end}</div>
-                            <div className="zc-info">{t.info}</div>
+                            <div className="zc-begin" style={{ userSelect: copyTextState ? 'text' : 'none' }}>{t.begin}</div>
+                            <div className="zc-content" style={{ userSelect: copyTextState ? 'text' : 'none' }}>{t.content}</div>
+                            <div className="zc-end" style={{ userSelect: copyTextState ? 'text' : 'none' }}>{t.end}</div>
+                            <div className="zc-info" style={{ userSelect: copyTextState ? 'text' : 'none' }}>{t.info}</div>
                         </div>
-                        <div 
-                        id={`zekr-counter-id-${index}`}
-                        className="zc-counter" 
-                        onTouchStart={startSqueeze} 
-                        onTouchEnd={endSqueeze} 
-                        onClick={e => decrementCounter(e)}>
+                        <div
+                            id={`zekr-counter-id-${index}`}
+                            className="zc-counter"
+                            onTouchStart={startSqueeze}
+                            onTouchEnd={endSqueeze}
+                            onClick={e => decrementCounter(e)}>
                             {/* <Button>{t.count}</Button> */}
                             {counterState.find(c => c.id === azkarPage.id)?.counters[index - 1]}
                         </div>

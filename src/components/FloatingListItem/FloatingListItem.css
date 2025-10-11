@@ -1,5 +1,5 @@
 .flt-lst-item {
-  background-color: #d2ead6e6;
+  background-color: var(--color-002);
   width: 100%;
   /* border: 1px solid red; */
   min-height: 55px;
@@ -14,7 +14,7 @@
   transition: 150ms;
 }
 .flt-lst-item * {
-  color: #036800 !important;
+  color: var(--color-001) !important;
   transition: 150ms;
 }
 .chk-canvas {

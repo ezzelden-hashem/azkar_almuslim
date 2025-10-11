@@ -1,7 +1,7 @@
 .app-settings {
 }
 .as-header {
-  background-color: #cbf0e4e6;
+  background-color: var(--color-013);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -15,8 +15,8 @@
   z-index: 10;
 }
 .as-h-title {
-  color: #094900;
-  font-size: 18px;
+  color: var(--color-014);
+  font-size: 1.13rem;
   font-family: noto;
   font-weight: 700;
   display: flex;
@@ -30,8 +30,8 @@
   align-items: center;
 }
 .as-h-icon * {
-  color: #094900;
-  font-size: 27px !important;
+  color: var(--color-014);
+  font-size: 1.7rem !important;
 }
 .as-body {
   margin-top: 80px;
@@ -42,12 +42,12 @@
 }
 .show-themes-btn {
   font-family: cna !important;
-  font-size: 20px !important;
-  color: #094900 !important;
+  font-size: 1.25rem !important;
+  color: var(--color-001) !important;
   box-shadow: none !important;
   min-height: 55px;
   border-radius: 13px !important;
-  background-color: #d2ead6e6 !important;
+  background-color: var(--color-002) !important;
   border: none !important;
   outline: none !important;
 }

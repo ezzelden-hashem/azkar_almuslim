@@ -1,6 +1,6 @@
 .drawer-item {
-  background-color: #d2d8d2 !important;
-  border: 1px solid #4b514b !important;
+  background-color: var(--color-006) !important;
+  border: 1px solid var(--color-007) !important;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   outline: none !important;
 }
 .drawer-item:focus {
-  border: 1px solid #4b514b !important;
+  border: 1px solid var(--color-007) !important;
   outline: none !important;
 }
 .drawer-item .di-icon {
@@ -20,8 +20,13 @@
   justify-content: center;
   align-items: center;
 }
+.drawer-item .di-icon * {
+  font-size: 1.4rem !important;
+  color: var(--color-001) !important;
+}
 .drawer-item .di-title {
-  font-size: 16px;
+  color: var(--color-001);
+  font-size: 1rem;
   font-weight: 500;
   font-family: cna;
   display: flex;

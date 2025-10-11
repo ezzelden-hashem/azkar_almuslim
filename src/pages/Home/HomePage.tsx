@@ -30,23 +30,26 @@ export default function HomePage()
     const navigate = useNavigate();
     const counterState = useSelector((state: RootState) => state.counterState);
     const icons = MuiIcons
-    
-    const gotoAzkarPage = (azkarPage: ZekrPage) => {
+
+    const gotoAzkarPage = (azkarPage: ZekrPage) =>
+    {
         dispatch(setAzkarPage(azkarPage));
-        setTimeout(() => {
+        setTimeout(() =>
+        {
             navigate('/azkar');
         }, 300);
     }
     return (<>
-        <Header/>
+        <Header />
         <Drawer>
-            <div className="margin_top" style={{marginTop: "20px", padding: "20px 0", fontSize: "18px", fontWeight: "700"}}>اذكار المسلم</div>
-            <DrawerItem title="المفضلة" icon={<FavoriteBorderIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/favs')}/>
-            <DrawerItem title="الاعدادات" icon={<SettingsOutlinedIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/settings')}/>
-            <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon style={{fontSize: "22px"}}/>} onClick={e => navigate('/appInfo')}/>
+            <div className="margin_top">اذكار المسلم</div>
+            <DrawerItem title="المفضلة" icon={<FavoriteBorderIcon />} onClick={e => navigate('/favs')} />
+            <DrawerItem title="الاعدادات" icon={<SettingsOutlinedIcon />} onClick={e => navigate('/settings')} />
+            <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon />} onClick={e => navigate('/appInfo')} />
         </Drawer>
         <CardContainer>
-            {AzkarPages.map(t => {
+            {AzkarPages.map(t =>
+            {
                 const icon = icons.find(i => i.name === t.icon)!.icon
                 return (
                     <div key={t.id} onClick={e => gotoAzkarPage(t)}>
@@ -54,7 +57,7 @@ export default function HomePage()
                     </div>
                 )
             })}
-            
+
         </CardContainer>
     </>)
 }

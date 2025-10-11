@@ -1,5 +1,5 @@
 .timer-settings-container {
-  background-color: #000000af;
+  background-color: var(--color-008) !important;
   backdrop-filter: blur(7px);
   width: 100vw;
   height: 100vh;
@@ -18,14 +18,14 @@
     opacity: 1;
 } */
 .timer-settings-container * {
-  color: black;
+  color: var(--color-025) !important;
   /* padding: 0 !important; */
   /* display: block !important; */
   /* justify-content: start !important; */
 }
 .timer-settings-box {
   align-self: center;
-  background-color: #f0f8ff;
+  background-color: var(--color-009);
   border-radius: 15px;
   max-height: 80%;
   display: flex;
@@ -67,7 +67,7 @@
   padding: 0;
 }
 .tmr-stat-title {
-  font-size: 15px;
+  font-size: 0.94rem;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -78,7 +78,7 @@
   gap: 10px;
 }
 .tmr-box-btns {
-  color: #036800 !important;
+  color: var(--color-001) !important;
 
   display: flex;
   justify-content: space-between;
@@ -86,16 +86,16 @@
   gap: 20px;
 }
 .tmr-box-btns * {
-  color: #036800 !important;
+  color: var(--color-001) !important;
   outline: none !important;
 }
 .tmr-btn.contained {
-  color: #f0f8ff !important;
-  background-color: #036800 !important;
+  color: var(--color-009) !important;
+  background-color: var(--color-001) !important;
 }
 .tmr-btn.outlined {
-  color: #036800 !important;
-  border: 1px solid #036800 !important;
+  color: var(--color-001) !important;
+  border: 1px solid var(--color-001) !important;
 }
 .tmr-box-btns *:focus,
 .tmr-box-btns *:active {

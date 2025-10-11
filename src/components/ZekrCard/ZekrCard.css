@@ -1,9 +1,8 @@
 /* cspell:disable */
 .zekr-card {
-  background-color: #356e58 !important;
-  /* border: 2px solid #24392400 !important; */
+  background-color: var(--color-011) !important;
   border: none !important;
-  min-height: 55px;
+  min-height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,20 +12,20 @@
   transition: 150ms;
 }
 .zekr-card .zc-icon {
-  color: #ffffff !important;
+  color: var(--color-012) !important;
   width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .zekr-card .zc-icon * {
-  color: #ffffff !important;
+  color: var(--color-012) !important;
 }
 .zekr-card .zc-title {
-  color: #ffffff !important;
+  color: var(--color-012) !important;
   display: flex;
   justify-content: end;
   align-items: center;
   font-family: noto !important;
-  font-size: 17px !important;
+  font-size: 1.1rem !important;
 }

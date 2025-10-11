@@ -1,8 +1,8 @@
 .main-header {
-  background-color: #4d9c82;
+  background-color: var(--color-010);
   padding-top: 30px;
   font-family: noto;
-  font-size: 30px;
+  font-size: 1.9rem;
   font-weight: 700;
   width: 100%;
   min-height: 220px;
@@ -12,20 +12,20 @@
   position: relative;
 }
 .mh-menu-icon {
-  font-size: 32px !important;
+  font-size: 2rem !important;
   position: absolute;
   top: 50px;
   left: 20px;
 }
 .floating-header {
-  background-color: #4d9c82;
+  background-color: var(--color-010);
   padding: 10px;
   padding-top: 30px;
   font-family: noto;
-  font-size: 19px;
+  font-size: 1.19rem;
   font-weight: 600;
   width: 100%;
-  box-shadow: 0 0 15px #00000093;
+  box-shadow: 0 0 15px var(--color-008);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +37,7 @@
   transition: 200ms;
 }
 .floating-header .fh-title {
+  color: var(--color-027) !important;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -45,4 +46,7 @@
   width: fit-content;
   border: none !important;
   outline: none !important;
+}
+.floating-header .fh-menu-btn * {
+  color: var(--color-027) !important;
 }

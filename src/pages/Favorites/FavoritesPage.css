@@ -1,7 +1,7 @@
 .app-favorites {
 }
 .af-header {
-  background-color: #cbf0e4e6;
+  background-color: var(--color-013);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -15,8 +15,8 @@
   z-index: 10;
 }
 .af-h-title {
-  color: #094900;
-  font-size: 18px;
+  color: var(--color-014);
+  font-size: 1.13rem;
   font-family: noto;
   font-weight: 700;
   display: flex;
@@ -30,8 +30,8 @@
   align-items: center;
 }
 .af-h-icon * {
-  color: #094900;
-  font-size: 27px !important;
+  color: var(--color-014);
+  font-size: 1.7rem !important;
 }
 .af-body {
   margin-top: 80px;

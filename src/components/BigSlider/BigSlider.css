@@ -1,6 +1,6 @@
 .big-slider {
-  color: #036800;
-  background-color: #d2ead6e6;
+  color: var(--color-001);
+  background-color: var(--color-002);
   /* border: 1px solid red; */
   border-radius: 15px;
   padding: 15px;
@@ -13,5 +13,5 @@
   align-items: center;
 }
 .big-slider * {
-  color: #036800;
+  color: var(--color-001);
 }

@@ -1,6 +1,6 @@
 /*  cspell:disable */
 .azkar-header {
-  background-color: #cbf0e4e6;
+  background-color: var(--color-013);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -14,8 +14,8 @@
   z-index: 10;
 }
 .azkar-header .ah-title {
-  color: #094900;
-  font-size: 18px;
+  color: var(--color-014);
+  font-size: 1.13rem;
   font-family: noto;
   font-weight: 700;
   display: flex;
@@ -29,15 +29,14 @@
   align-items: center;
 }
 .azkar-header .ah-icon * {
-  color: #094900;
+  color: var(--color-014);
 }
 .azkar-header .ah-icon * {
-  font-size: 27px !important;
+  font-size: 1.7rem !important;
 }
 
 .progress-bar {
   content: "";
-  /* background-color: #ff0000; */
   width: 100%;
   min-height: 3px;
   position: absolute;
@@ -48,12 +47,12 @@
   align-items: center;
 }
 .progress-bar .progress-value {
-  background-color: #24614d;
+  background-color: var(--color-015);
   width: 0%;
   min-height: 3px;
 }
 .azkar-cards-wrapper {
-  background-color: #fafffe;
+  background-color: var(--color-016);
   margin-top: 75px;
   display: flex;
   flex-direction: column;
@@ -63,7 +62,7 @@
   gap: 20px;
 }
 .azkar-cards-wrapper .zekr-card {
-  background-color: #dfeee9 !important;
+  background-color: var(--color-017) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +72,7 @@
   overflow: hidden;
 }
 .zekr-card .zc-header {
-  background-color: #46997d;
+  background-color: var(--color-018);
   min-height: 45px;
   display: flex;
   justify-content: space-between;
@@ -85,10 +84,10 @@
 }
 .zekr-card .zc-header .zc-number {
   font-family: digit7;
-  font-size: 23px;
+  font-size: 1.44rem;
 }
 .zekr-card .zc-header .zc-reset-icon {
-  background-color: #00000000;
+  background-color: var(--color-019);
   width: fit-content;
   height: auto;
   padding: 3px;
@@ -100,7 +99,7 @@
   border-radius: 50px;
 }
 .zekr-card .zc-header .zc-reset-icon.active {
-  background-color: #0000001f;
+  background-color: var(--color-020);
   transform: rotateZ(-360deg) scale(1.1);
 }
 .zekr-card .zc-body {
@@ -112,42 +111,42 @@
   padding: 0 20px;
 }
 .zekr-card .zc-body .zc-begin {
-  color: #fc7100;
+  color: var(--color-021);
   display: flex;
   justify-content: end;
   align-items: center;
-  font-size: 19px;
+  font-size: 1.19rem;
   font-family: cna;
 }
 .zekr-card .zc-body .zc-content {
-  color: #000000;
+  color: var(--color-022);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 1.13rem;
   font-family: noto;
 }
 .zekr-card .zc-body .zc-end {
-  color: #505050;
+  color: var(--color-023);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
+  font-size: 1.19rem;
   font-family: cna;
 }
 .zekr-card .zc-body .zc-info {
-  color: #7a0092;
+  color: var(--color-024);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
+  font-size: 1.19rem;
   font-family: cna;
 }
 .zekr-card .zc-counter {
-  background-color: #46997d;
+  background-color: var(--color-018);
   height: 60px;
   font-family: digit7;
-  font-size: 30px;
+  font-size: 1.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,25 +156,25 @@
   transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 2);
 }
 .zekr-card .zc-counter.active {
-  background-color: #24614d;
+  background-color: var(--color-015);
   transform: scaleX(1.1) scaleY(0.9);
 }
 .zekr-card .zc-counter * {
   font-family: digit7;
-  font-size: 30px;
+  font-size: 1.9rem;
   border-radius: 15px !important;
   border: none !important;
   outline: none !important;
 }
 .timer-ui {
-  color: #094900;
+  color: var(--color-014);
   display: flex;
   height: 0px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
   font-family: digit7;
-  font-size: 40px;
+  font-size: 2.5rem;
   transform: scaleY(0);
 
   transition: 300ms;

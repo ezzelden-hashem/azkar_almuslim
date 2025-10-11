@@ -4,6 +4,15 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialValue: number = 3
 const storageKey = 'fontSizeState'
 
+const fontSizeMap: { [key: number]: string } = {
+    1: '14px',
+    2: '16px',
+    3: '18px',
+    4: '20px',
+    5: '22px',
+}
+
+
 export const initFontSizeState = createAsyncThunk(
     'fontSize/init',
     async () =>
@@ -33,10 +42,12 @@ export const fontSizeSlice = createSlice({
     {
         builder.addCase(initFontSizeState.fulfilled, (state, action) =>
         {
+            document.documentElement.style.fontSize = fontSizeMap[action.payload]
             return action.payload;
         })
         builder.addCase(setFontSizeState.fulfilled, (state, action) =>
         {
+            document.documentElement.style.fontSize = fontSizeMap[action.payload]
             return action.payload;
         })
     },

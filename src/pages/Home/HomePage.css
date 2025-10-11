@@ -1,0 +1,8 @@
+.margin_top {
+  color: var(--color-001);
+  font-family: noto;
+  margin-top: 20px;
+  padding: 20px 0;
+  font-size: 1.13rem;
+  font-weight: 700;
+}

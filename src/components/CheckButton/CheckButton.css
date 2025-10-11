@@ -1,5 +1,5 @@
 .check-button {
-  background-color: #d2ead6e6;
+  background-color: var(--color-002);
   width: 100%;
   /* border: 1px solid red; */
   min-height: 55px;
@@ -14,12 +14,12 @@
   transition: 150ms;
 }
 .check-button * {
-  color: #036800 !important;
+  color: var(--color-001) !important;
   transition: 150ms;
 }
 .chk-canvas {
-  background-color: #1b61236e;
-  border: 3px solid #03680086;
+  background-color: var(--color-003);
+  border: 2px solid var(--color-004);
   border-radius: 15px;
   position: absolute;
   top: 0;

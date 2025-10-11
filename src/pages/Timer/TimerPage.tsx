@@ -75,7 +75,7 @@ export default function TimerPage()
     return (<>
         <div className="app-timer">
             <div className="at-header">
-                <div className="at-h-icon"><AccessTimeFilledIcon style={{ fontSize: "22px" }} /></div>
+                <div className="at-h-icon"><AccessTimeFilledIcon /></div>
                 <div className="at-h-title">المؤقت</div>
             </div>
             <div className="at-body">
