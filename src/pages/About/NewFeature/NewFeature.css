@@ -1,0 +1,26 @@
+.new-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid var(--color-001);
+  border-radius: 10px;
+  gap: 10px;
+}
+.nf-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+.nf-h-title {
+}
+.nf-h-icon {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nf-body {
+}

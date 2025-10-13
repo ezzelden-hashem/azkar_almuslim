@@ -82,7 +82,7 @@ export default function SettingsPage()
 
                 <CheckButton title='الاهتزاز' checked={vibrationState} onClick={onVibration} />
 
-                <CheckButton title='تتبع الاصبع' checked={fingerTrackingState} onClick={onFingerTracking} />
+                {/* <CheckButton title='تتبع الاصبع' checked={fingerTrackingState} onClick={onFingerTracking} /> */}
 
                 <FloatingList
                     visible={showThemes}

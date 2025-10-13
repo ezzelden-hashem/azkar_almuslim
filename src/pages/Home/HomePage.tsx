@@ -45,7 +45,7 @@ export default function HomePage()
             <div className="margin_top">اذكار المسلم</div>
             <DrawerItem title="المفضلة" icon={<FavoriteBorderIcon />} onClick={e => navigate('/favs')} />
             <DrawerItem title="الاعدادات" icon={<SettingsOutlinedIcon />} onClick={e => navigate('/settings')} />
-            <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon />} onClick={e => navigate('/appInfo')} />
+            {/* <DrawerItem title="حول التطبيق" icon={<InfoOutlinedIcon />} onClick={e => navigate('/appInfo')} /> */}
         </Drawer>
         <CardContainer>
             {AzkarPages.map(t =>

@@ -1,15 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    react(), svgr(),
     {
       name: "force-reload-plugin",
-      handleHotUpdate({ server, file }) {
-        if ([".js", ".jsx", ".ts", ".tsx", ".json"].includes(file)) {
+      handleHotUpdate({ server, file })
+      {
+        if ([".js", ".jsx", ".ts", ".tsx", ".json"].includes(file))
+        {
           server.ws.send({
             type: "full-reload",
           });

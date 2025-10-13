@@ -1,5 +1,5 @@
 // cspell:disable
-import InfoPage from "#pages/AppInfo/InfoPage";
+import AboutPage from "#pages/About/AboutPage";
 import AzkarPage from "#pages/Azkar/AzkarPage";
 import FavoritesPage from "#pages/Favorites/FavoritesPage";
 import HomePage from "#pages/Home/HomePage";
@@ -11,31 +11,31 @@ import { createBrowserRouter } from "react-router";
 export const router = createBrowserRouter([
     {
         path: '',
-        element: <HomePage/>
+        element: <HomePage />
     },
     {
         path: 'home',
-        element: <HomePage/>
+        element: <HomePage />
     },
     {
         path: 'azkar',
-        element: <AzkarPage/>
+        element: <AzkarPage />
     },
     {
         path: 'favs',
-        element: <FavoritesPage/>
+        element: <FavoritesPage />
     },
     {
         path: 'settings',
-        element: <SettingsPage/>
+        element: <SettingsPage />
     },
     {
         path: 'appInfo',
-        element: <InfoPage/>
+        element: <AboutPage />
     },
     {
         path: 'timer',
-        element: <TimerPage/>
+        element: <TimerPage />
     },
     {
         path: '*',
