@@ -22,15 +22,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    applicationVariants.all { variant ->
-        variant.outputs.all { output ->
-            def appName = "azkar_almuslim"
-            def versionName = variant.versionName
-            def buildDate = new Date().format("yyyyMMddHHmmss")
-
-            outputFileName = "${appName}-${versionName}-${buildDate}.apk"
-        }
-    }
 }
 
 repositories {

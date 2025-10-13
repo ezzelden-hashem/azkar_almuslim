@@ -70,4 +70,4 @@ cd azkar_almuslim
 npm install
 
 # Run the app
-npm start
+npm run dev
